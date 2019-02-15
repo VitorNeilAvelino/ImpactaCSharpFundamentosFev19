@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSharpFundamentos.Capitulo02.Visualizador
+namespace CSharpFundamentos.Capitulo03.Variaveis
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace CSharpFundamentos.Capitulo02.Visualizador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VisualizadorForm());
+            Application.Run(new VariaveisForm());
         }
     }
 }
