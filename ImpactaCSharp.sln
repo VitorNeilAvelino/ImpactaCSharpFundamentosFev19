@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFundamentos.Capitulo0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFundamentos.Capitulo04.Frete", "CSharpFundamentos.Capitulo04.Frete\CSharpFundamentos.Capitulo04.Frete.csproj", "{B7406E24-D2D9-45AB-A4D1-099A676780E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFundamentos.Capitulo05.Repeticao.Testes", "CSharpFundamentos.Capitulo05.Repeticao.Testes\CSharpFundamentos.Capitulo05.Repeticao.Testes.csproj", "{16A19BA8-254C-4EC3-82C7-A206EF495AD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFundamentos.Capitulo08.Vetores.Testes", "CSharpFundamentos.Capitulo08.Vetores.Testes\CSharpFundamentos.Capitulo08.Vetores.Testes.csproj", "{CC9E257A-8DD9-4822-9DCF-193DE01CD231}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B7406E24-D2D9-45AB-A4D1-099A676780E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7406E24-D2D9-45AB-A4D1-099A676780E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7406E24-D2D9-45AB-A4D1-099A676780E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A19BA8-254C-4EC3-82C7-A206EF495AD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A19BA8-254C-4EC3-82C7-A206EF495AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A19BA8-254C-4EC3-82C7-A206EF495AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A19BA8-254C-4EC3-82C7-A206EF495AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9E257A-8DD9-4822-9DCF-193DE01CD231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9E257A-8DD9-4822-9DCF-193DE01CD231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9E257A-8DD9-4822-9DCF-193DE01CD231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9E257A-8DD9-4822-9DCF-193DE01CD231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

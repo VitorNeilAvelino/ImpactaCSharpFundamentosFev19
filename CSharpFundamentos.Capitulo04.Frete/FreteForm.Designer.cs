@@ -125,12 +125,14 @@
             // 
             // limparButton
             // 
+            this.limparButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.limparButton.Location = new System.Drawing.Point(214, 247);
             this.limparButton.Name = "limparButton";
             this.limparButton.Size = new System.Drawing.Size(75, 23);
             this.limparButton.TabIndex = 11;
             this.limparButton.Text = "&Limpar";
             this.limparButton.UseVisualStyleBackColor = true;
+            this.limparButton.Click += new System.EventHandler(this.limparButton_Click);
             // 
             // calcularButton
             // 

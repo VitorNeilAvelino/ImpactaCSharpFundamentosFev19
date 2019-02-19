@@ -79,6 +79,8 @@ namespace CSharpFundamentos.Capitulo04.Frete
                 percentual = 0.75m;
             }
 
+            freteTextBox.Text = percentual.ToString("P1");
+            totalLabel.Text = ((1 + percentual) * valor).ToString("C");
         }
 
         private List<string> ValidarFormulario()
@@ -110,6 +112,16 @@ namespace CSharpFundamentos.Capitulo04.Frete
             }
 
             return erros;
+        }
+
+        private void limparButton_Click(object sender, EventArgs e)
+        {
+            clienteTextBox.Text = "";
+            valorTextBox.Clear();
+            freteTextBox.Text = null;
+            totalLabel.Text = string.Empty;
+
+            ufComboBox.SelectedIndex = -1;
         }
     }
 }
