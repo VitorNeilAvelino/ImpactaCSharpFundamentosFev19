@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Text;
 
 namespace CSharpFundamentos.Capitulo08.Vetores.Testes
 {
@@ -52,9 +53,29 @@ namespace CSharpFundamentos.Capitulo08.Vetores.Testes
         [TestMethod]
         public void ParamsTeste()
         {
-            var decimais = new decimal[] { 15.63m, 0.5m, 1, 0.8m };
+            //var decimais = new decimal[] { 15.63m, 0.5m, 1, 0.8m };
 
-            Console.WriteLine(Media(decimais));
+            Console.WriteLine(Media(15.63m, 0.5m, 1, 0.8m, 58, 7.89m));
+        }
+
+        [TestMethod]
+        public void TodaStringEhUmVetorTeste()
+        {
+            var nome = "C Sharp";
+
+            Assert.AreEqual(nome[0], 'C');
+
+            foreach (var @char in nome)
+            {
+                Console.Write(@char);
+            }
+
+            //StringBuilder
+
+            //for (int i = 0; i < length; i++)
+            //{
+
+            //}
         }
 
         private decimal Media(decimal valor1, decimal valor2)
@@ -62,7 +83,7 @@ namespace CSharpFundamentos.Capitulo08.Vetores.Testes
             return (valor1 + valor2) / 2;
         }
 
-        private decimal Media(decimal[] valores)
+        private decimal Media(params decimal[] valores)
         {
             var soma = 0m;
 
