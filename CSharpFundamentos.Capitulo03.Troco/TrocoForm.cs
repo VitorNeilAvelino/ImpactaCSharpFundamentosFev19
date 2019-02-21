@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharpFundamentos.Capitulo03.Troco
@@ -37,7 +31,6 @@ namespace CSharpFundamentos.Capitulo03.Troco
                 moedasListView.Items[moedas.IndexOf(moeda)].Text = quantidade.ToString();
             }
 
-            ////ToDo: trocar por estrutura de repetição.
             //var moedas1 = (int)troco;
             ////troco = troco - moedas1;
             ////troco -= moedas1;
