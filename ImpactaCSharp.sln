@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.Sistem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SistemaArquivosTests", "Oficina.Repositorios.SistemaArquivosTests\Oficina.Repositorios.SistemaArquivosTests.csproj", "{F613391C-7288-4DF7-A935-9027B3A9AB9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.WindowsForms", "Oficina.WindowsForms\Oficina.WindowsForms.csproj", "{F5FD520A-5E82-4F03-B0CF-B42686D08CF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{F613391C-7288-4DF7-A935-9027B3A9AB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F613391C-7288-4DF7-A935-9027B3A9AB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F613391C-7288-4DF7-A935-9027B3A9AB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FD520A-5E82-4F03-B0CF-B42686D08CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FD520A-5E82-4F03-B0CF-B42686D08CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FD520A-5E82-4F03-B0CF-B42686D08CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FD520A-5E82-4F03-B0CF-B42686D08CF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,5 +85,6 @@ Global
 		{7D05597E-26FD-457C-A7E2-B45BF5A64871} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
 		{7F2E1C74-E468-4755-AFE2-463F83E6FB70} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
 		{F613391C-7288-4DF7-A935-9027B3A9AB9B} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
+		{F5FD520A-5E82-4F03-B0CF-B42686D08CF4} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
 	EndGlobalSection
 EndGlobal

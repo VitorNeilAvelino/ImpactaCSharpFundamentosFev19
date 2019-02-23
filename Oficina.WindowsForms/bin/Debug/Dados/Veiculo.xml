@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<veiculos>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>326258b2-7a2d-4c8c-a49d-85b1616e7236</Id>
+    <Placa>ABC1234</Placa>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>3</Id>
+      <Nome>Fiesta</Nome>
+      <Marca>
+        <Id>2</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Ano>2014</Ano>
+    <Observacao>Observação</Observacao>
+  </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>ce661e9e-629a-48e8-b311-c2b527cd7c84</Id>
+    <Placa>ABC1234</Placa>
+    <Cor>
+      <Id>1</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Modelo>
+      <Id>3</Id>
+      <Nome>Fiesta</Nome>
+      <Marca>
+        <Id>2</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Ano>2014</Ano>
+    <Observacao>Observação</Observacao>
+  </Veiculo>
+</veiculos>
