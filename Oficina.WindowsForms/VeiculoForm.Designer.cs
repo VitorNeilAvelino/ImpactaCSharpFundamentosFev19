@@ -95,6 +95,7 @@
             this.marcaComboBox.Size = new System.Drawing.Size(121, 21);
             this.marcaComboBox.TabIndex = 3;
             this.marcaComboBox.Tag = "*";
+            this.marcaComboBox.SelectedIndexChanged += new System.EventHandler(this.marcaComboBox_SelectedIndexChanged);
             // 
             // modeloComboBox
             // 
@@ -162,18 +163,21 @@
             // placaMaskedTextBox
             // 
             this.placaMaskedTextBox.Location = new System.Drawing.Point(63, 6);
+            this.placaMaskedTextBox.Mask = ">LLL<-0000";
             this.placaMaskedTextBox.Name = "placaMaskedTextBox";
             this.placaMaskedTextBox.Size = new System.Drawing.Size(121, 20);
             this.placaMaskedTextBox.TabIndex = 1;
-            this.placaMaskedTextBox.Tag = "*";
+            this.placaMaskedTextBox.Tag = "*PLACA";
+            this.placaMaskedTextBox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // anoMaskedTextBox
             // 
             this.anoMaskedTextBox.Location = new System.Drawing.Point(63, 177);
+            this.anoMaskedTextBox.Mask = "0000";
             this.anoMaskedTextBox.Name = "anoMaskedTextBox";
             this.anoMaskedTextBox.Size = new System.Drawing.Size(121, 20);
             this.anoMaskedTextBox.TabIndex = 7;
-            this.anoMaskedTextBox.Tag = "*";
+            this.anoMaskedTextBox.Tag = "*ANO";
             // 
             // observacaoGroupBox
             // 
@@ -206,6 +210,7 @@
             // 
             // veiculoErrorProvider
             // 
+            this.veiculoErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.veiculoErrorProvider.ContainerControl = this;
             // 
             // VeiculoForm

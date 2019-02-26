@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Impacta.Apoio\Impacta.Apoio.csproj">
+      <Project>{aa95da36-303c-4c13-b3fa-dcfcb4bf9a14}</Project>
+      <Name>Impacta.Apoio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
       <Project>{7d05597e-26fd-457c-a7e2-b45bf5a64871}</Project>
       <Name>Oficina.Dominio</Name>
