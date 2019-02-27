@@ -8,9 +8,12 @@ using System.Windows.Forms;
 
 namespace Impacta.Apoio
 {
-    public class Formulario
+    /// <summary>
+    /// Classe de apoio para executar operação em quaisquer formulários.
+    /// </summary>
+    public static class Formulario
     {
-        public bool Validar(Form formulario, ErrorProvider provedorErro)
+        public static bool Validar(Form formulario, ErrorProvider provedorErro)
         {
             foreach (Control controle in formulario.Controls)
             {
@@ -32,20 +35,42 @@ namespace Impacta.Apoio
                 }
             }
 
-            return FormularioEstahSemErros(formulario, provedorErro);
+            //return FormularioEstahSemErros(formulario, provedorErro);
+            return !provedorErro.PossuiErro(formulario);
         }
 
-        private bool FormularioEstahSemErros(Form formulario, ErrorProvider provedorErro)
+        /// <summary>
+        /// Método usado para limpar o formulário.
+        /// </summary>
+        /// <param name="controle">Controle a ser limpo.</param>
+        public static void Limpar(Control controle)
+        {
+            foreach (Control ctrl in controle.Controls)
+            {
+                if (ctrl is TextBox || ctrl is MaskedTextBox)
+                {
+                    ctrl.ResetText();
+                }
+                else if (ctrl is ComboBox)
+                {
+                    ((ComboBox)ctrl).SelectedIndex = -1;
+                }
+
+                Limpar(ctrl);
+            }
+        }
+
+        private static bool PossuiErro(this ErrorProvider provedorErro, Form formulario)
         {
             foreach (Control controle in formulario.Controls)
             {
                 if (provedorErro.GetError(controle) != string.Empty)
                 {
-                    return false;
+                    return true;
                 }                
             }
 
-            return true;
+            return false;
         }
 
         private static void DefinirErro(ErrorProvider provedorErro, Control controle, 
@@ -55,7 +80,7 @@ namespace Impacta.Apoio
             controle.Focus();
         }
 
-        private void ValidarTipoDado(Control controle, ErrorProvider provedorErro)
+        private static void ValidarTipoDado(Control controle, ErrorProvider provedorErro)
         {
             var controleTag = controle.Tag.ToString().ToUpper();
 

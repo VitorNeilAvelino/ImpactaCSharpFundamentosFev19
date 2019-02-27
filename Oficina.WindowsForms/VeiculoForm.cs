@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +24,12 @@ namespace Oficina.WindowsForms
 
         private void PopularControles()
         {
+            //marcaComboBox.SelectedIndexChanged += null;
             marcaComboBox.DataSource = new MarcaRepositorio().Selecionar();
             marcaComboBox.DisplayMember = "Nome";
             marcaComboBox.ValueMember = "Id";
             marcaComboBox.SelectedIndex = -1;
+            //marcaComboBox.SelectedIndexChanged += marcaComboBox_SelectedIndexChanged;
 
             corComboBox.DataSource = new CorRepositorio().Selecionar();
             corComboBox.DisplayMember = "Nome";
@@ -42,29 +45,84 @@ namespace Oficina.WindowsForms
 
         private void gravarButton_Click(object sender, EventArgs e)
         {
-            var formulario = new Formulario();
+            //var formulario = new Formulario();
 
-            if (formulario.Validar(this, veiculoErrorProvider))
+            if (Formulario.Validar(this, veiculoErrorProvider))
             {
+                try
+                {
+                    GravarVeiculo();
 
+                    MessageBox.Show("Veículo gravado com sucesso!");
+
+                    Formulario.Limpar(this);
+
+                    placaMaskedTextBox.Focus();
+                }
+                catch (DirectoryNotFoundException)
+                {
+                    MessageBox
+                        .Show("Uma parte do caminho do arquivo de Veículo não foi encontrada. A gravação não foi realizada.");
+                }
+                catch (FileNotFoundException)
+                {
+                    MessageBox
+                        .Show("O arquivo de Veículo não foi encontrado. A gravação não foi realizada.");
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    MessageBox.Show("O arquivo Veiculo.xml não tem permissão de gravação.");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Houve um erro e a gravação não foi realizada.");
+                    //logar o erro - log4Net
+                }
             }
+        }
+
+        private void GravarVeiculo()
+        {
+            var veiculo = new Veiculo();
+
+            veiculo.Ano = Convert.ToInt32(anoMaskedTextBox.Text);
+            veiculo.Cambio = (Cambio)cambioComboBox.SelectedItem;
+            veiculo.Combustivel = (Combustivel)combustivelComboBox.SelectedItem;
+            veiculo.Cor = (Cor)corComboBox.SelectedItem;
+            veiculo.Modelo = (Modelo)modeloComboBox.SelectedItem;
+            veiculo.Observacao = observacaoTextBox.Text;
+            veiculo.Placa = placaMaskedTextBox.Text;
+
+            //var repositorio = new VeiculoRepositorio();
+            //repositorio.Inserir(veiculo);
+            new VeiculoRepositorio().Inserir(veiculo);
         }
 
         private void marcaComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (marcaComboBox.SelectedIndex == -1)
             {
-                modeloComboBox.DataSource = null;
+                //modeloComboBox.DataSource = null;
                 return;
             }
 
             var marca = (Marca)marcaComboBox.SelectedItem;
 
-            modeloComboBox.DataSource = 
+            modeloComboBox.DataSource =
                 new ModeloRepositorio().SelecionarPorMarca(marca.Id);
             modeloComboBox.DisplayMember = "Nome";
             modeloComboBox.ValueMember = "Id";
             modeloComboBox.SelectedIndex = -1;
+        }
+
+        private void observacaoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //observacaoGroupBox.Text =
+            //    $"Observação ({observacaoTextBox.MaxLength - observacaoTextBox.Text.Length })";
+
+            observacaoGroupBox.Text =
+                $"Observação ({observacaoTextBox.MaxLength - observacaoTextBox.TextLength })";
+
         }
     }
 }

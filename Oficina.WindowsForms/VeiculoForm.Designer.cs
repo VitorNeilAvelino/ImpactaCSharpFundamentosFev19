@@ -89,6 +89,7 @@
             // 
             // marcaComboBox
             // 
+            this.marcaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.marcaComboBox.FormattingEnabled = true;
             this.marcaComboBox.Location = new System.Drawing.Point(63, 63);
             this.marcaComboBox.Name = "marcaComboBox";
@@ -99,6 +100,7 @@
             // 
             // modeloComboBox
             // 
+            this.modeloComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modeloComboBox.FormattingEnabled = true;
             this.modeloComboBox.Location = new System.Drawing.Point(63, 120);
             this.modeloComboBox.Name = "modeloComboBox";
@@ -135,6 +137,7 @@
             // 
             // corComboBox
             // 
+            this.corComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.corComboBox.FormattingEnabled = true;
             this.corComboBox.Location = new System.Drawing.Point(320, 6);
             this.corComboBox.Name = "corComboBox";
@@ -144,6 +147,7 @@
             // 
             // combustivelComboBox
             // 
+            this.combustivelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combustivelComboBox.FormattingEnabled = true;
             this.combustivelComboBox.Location = new System.Drawing.Point(320, 63);
             this.combustivelComboBox.Name = "combustivelComboBox";
@@ -153,6 +157,7 @@
             // 
             // cambioComboBox
             // 
+            this.cambioComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cambioComboBox.FormattingEnabled = true;
             this.cambioComboBox.Location = new System.Drawing.Point(320, 120);
             this.cambioComboBox.Name = "cambioComboBox";
@@ -193,10 +198,12 @@
             // 
             this.observacaoTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.observacaoTextBox.Location = new System.Drawing.Point(3, 16);
+            this.observacaoTextBox.MaxLength = 300;
             this.observacaoTextBox.Multiline = true;
             this.observacaoTextBox.Name = "observacaoTextBox";
             this.observacaoTextBox.Size = new System.Drawing.Size(420, 106);
             this.observacaoTextBox.TabIndex = 0;
+            this.observacaoTextBox.TextChanged += new System.EventHandler(this.observacaoTextBox_TextChanged);
             // 
             // gravarButton
             // 
