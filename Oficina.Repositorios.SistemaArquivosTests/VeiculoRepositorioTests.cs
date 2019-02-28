@@ -1,11 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Oficina.Dominio;
-using Oficina.Repositorios.SistemaArquivos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Oficina.Repositorios.SistemaArquivos.Tests
 {
@@ -15,17 +9,22 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void InserirTest()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
             veiculo.Ano = 2014;
             veiculo.Cambio = Cambio.Manual;
+            veiculo.Carroceria = Carroceria.Hatch;
             veiculo.Combustivel = Combustivel.Flex;
             veiculo.Cor = new CorRepositorio().Selecionar(1);
             //veiculo.Id = 1;
             veiculo.Modelo = new ModeloRepositorio().Selecionar(3);
             veiculo.Observacao = "Observação";
-            veiculo.Placa = "ABC1234";
+            veiculo.Placa = "abc1234";
 
-            new VeiculoRepositorio().Inserir(veiculo);
+            new VeiculoRepositorio().Inserir<VeiculoPasseio>(veiculo);
+
+            Assert.AreEqual(veiculo.Placa, "ABC1234");
+
+            //new VeiculoRepositorio().Inserir<int>(5);
         }
     }
 }

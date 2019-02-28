@@ -12,6 +12,7 @@ namespace Oficina.Repositorios.SistemaArquivos
     {
         private string caminhoArquivo = "Dados\\Cor.txt";
 
+        //ToDo: OO - polimorfismo por sobrecarga
         public List<Cor> Selecionar()
         {
             var cores = new List<Cor>();

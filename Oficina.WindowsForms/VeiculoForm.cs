@@ -51,6 +51,8 @@ namespace Oficina.WindowsForms
             {
                 try
                 {
+                    //throw new Exception("O resumo do erro.");
+
                     GravarVeiculo();
 
                     MessageBox.Show("Veículo gravado com sucesso!");
@@ -73,20 +75,23 @@ namespace Oficina.WindowsForms
                 {
                     MessageBox.Show("O arquivo Veiculo.xml não tem permissão de gravação.");
                 }
-                catch (Exception)
+                catch (Exception excecao)
                 {
                     MessageBox.Show("Houve um erro e a gravação não foi realizada.");
-                    //logar o erro - log4Net
+
+                    log4net.LogManager.GetLogger(nameof(VeiculoForm))
+                        .Error(excecao.Message, excecao);
                 }
             }
         }
 
         private void GravarVeiculo()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
 
             veiculo.Ano = Convert.ToInt32(anoMaskedTextBox.Text);
             veiculo.Cambio = (Cambio)cambioComboBox.SelectedItem;
+            veiculo.Carroceria = Carroceria.Hatch;
             veiculo.Combustivel = (Combustivel)combustivelComboBox.SelectedItem;
             veiculo.Cor = (Cor)corComboBox.SelectedItem;
             veiculo.Modelo = (Modelo)modeloComboBox.SelectedItem;
