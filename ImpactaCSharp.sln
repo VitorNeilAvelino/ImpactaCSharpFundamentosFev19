@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.WindowsForms", "Ofi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Apoio", "Impacta.Apoio\Impacta.Apoio.csproj", "{AA95DA36-303C-4C13-B3FA-DCFCB4BF9A14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFundamentos.Capitulo12.ValorReferencia.Teste", "CSharpFundamentos.Capitulo12.ValorReferencia.Teste\CSharpFundamentos.Capitulo12.ValorReferencia.Teste.csproj", "{1E3160F0-2854-4ADC-ADE2-06D9E7EC1F66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{AA95DA36-303C-4C13-B3FA-DCFCB4BF9A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA95DA36-303C-4C13-B3FA-DCFCB4BF9A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA95DA36-303C-4C13-B3FA-DCFCB4BF9A14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E3160F0-2854-4ADC-ADE2-06D9E7EC1F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3160F0-2854-4ADC-ADE2-06D9E7EC1F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3160F0-2854-4ADC-ADE2-06D9E7EC1F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3160F0-2854-4ADC-ADE2-06D9E7EC1F66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

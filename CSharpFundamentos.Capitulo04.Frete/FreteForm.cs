@@ -23,7 +23,19 @@ namespace CSharpFundamentos.Capitulo04.Frete
 
             if (erros.Count == 0)
             {
-                Calcular();
+                var frete = new Frete(new UF { Sigla = ufComboBox.Text },
+                   Convert.ToDecimal(valorTextBox.Text));
+
+                frete.Cliente = new Cliente();
+                frete.Cliente.Nome = clienteTextBox.Text;
+                //frete.UF = new UF { Sigla = ufComboBox.Text };
+                //frete.Valor = Convert.ToDecimal(valorTextBox.Text);
+                //frete.Calcular();
+
+                freteTextBox.Text = frete.Percentual.ToString("P1");
+                totalLabel.Text = frete.Total.ToString("C");
+
+                //Calcular();
             }
             else
             {
