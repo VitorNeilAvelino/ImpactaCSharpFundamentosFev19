@@ -31,7 +31,7 @@ namespace Oficina.WindowsForms
             marcaComboBox.SelectedIndex = -1;
             //marcaComboBox.SelectedIndexChanged += marcaComboBox_SelectedIndexChanged;
 
-            corComboBox.DataSource = new CorRepositorio().Selecionar();
+            corComboBox.DataSource = new Oficina.Repositorios.SqlServer.CorRepositorio().Selecionar();
             corComboBox.DisplayMember = "Nome";
             corComboBox.ValueMember = "Id";
             corComboBox.SelectedIndex = -1;

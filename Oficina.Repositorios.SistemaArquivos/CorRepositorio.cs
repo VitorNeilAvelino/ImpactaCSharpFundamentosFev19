@@ -1,6 +1,7 @@
 ﻿using Oficina.Dominio;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,24 @@ using System.Threading.Tasks;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
-    public class CorRepositorio
+    public class CorRepositorio : ICorRepositorio
     {
-        private string caminhoArquivo = "Dados\\Cor.txt";
+        private string caminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoCor"];
+
+        public void Atualizar(Cor cor)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Excluir(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Inserir(Cor cor)
+        {
+            throw new NotImplementedException();
+        }
 
         //ToDo: OO - polimorfismo por sobrecarga
         public List<Cor> Selecionar()

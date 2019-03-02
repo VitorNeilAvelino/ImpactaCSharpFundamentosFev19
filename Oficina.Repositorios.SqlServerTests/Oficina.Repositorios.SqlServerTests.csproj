@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E3160F0-2854-4ADC-ADE2-06D9E7EC1F66}</ProjectGuid>
+    <ProjectGuid>{451263E3-907A-4114-B8BB-2369290A629B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpFundamentos.Capitulo12.ValorReferencia.Teste</RootNamespace>
-    <AssemblyName>CSharpFundamentos.Capitulo12.ValorReferencia.Teste</AssemblyName>
+    <RootNamespace>Oficina.Repositorios.SqlServerTests</RootNamespace>
+    <AssemblyName>Oficina.Repositorios.SqlServerTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,15 +51,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Cliente.cs" />
-    <Compile Include="ValorReferenciaTeste.cs" />
+    <Compile Include="CorRepositorioTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
-      <Project>{7d05597e-26fd-457c-a7e2-b45bf5a64871}</Project>
+      <Project>{7D05597E-26FD-457C-A7E2-B45BF5A64871}</Project>
       <Name>Oficina.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Oficina.Repositorios.SqlServer\Oficina.Repositorios.SqlServer.csproj">
+      <Project>{B7B6D9BD-7854-42A2-A163-39E8AE2038A7}</Project>
+      <Name>Oficina.Repositorios.SqlServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
