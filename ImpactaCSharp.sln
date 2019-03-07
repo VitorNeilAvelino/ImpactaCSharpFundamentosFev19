@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SqlSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SqlServerTests", "Oficina.Repositorios.SqlServerTests\Oficina.Repositorios.SqlServerTests.csproj", "{451263E3-907A-4114-B8BB-2369290A629B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Oficina.WindowsForms.Setup", "Oficina.WindowsForms.Setup\Oficina.WindowsForms.Setup.vdproj", "{7A5D7850-3B76-4A0B-87DC-CA233AE4D73F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,8 @@ Global
 		{451263E3-907A-4114-B8BB-2369290A629B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{451263E3-907A-4114-B8BB-2369290A629B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{451263E3-907A-4114-B8BB-2369290A629B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5D7850-3B76-4A0B-87DC-CA233AE4D73F}.Debug|Any CPU.ActiveCfg = Debug
+		{7A5D7850-3B76-4A0B-87DC-CA233AE4D73F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,5 +117,6 @@ Global
 		{AA95DA36-303C-4C13-B3FA-DCFCB4BF9A14} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
 		{B7B6D9BD-7854-42A2-A163-39E8AE2038A7} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
 		{451263E3-907A-4114-B8BB-2369290A629B} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
+		{7A5D7850-3B76-4A0B-87DC-CA233AE4D73F} = {3E7CA268-C1B6-4CFB-9292-F6A788C62B2B}
 	EndGlobalSection
 EndGlobal
